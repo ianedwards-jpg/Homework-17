@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-
-console.log(user.email); // 'avenue@q.com'
-
 const workoutSchema = new Schema({
   type: {
     type: String,
@@ -14,7 +11,7 @@ const workoutSchema = new Schema({
   name: {
     type: String,
     trim: true,
-    required: "Enter a name for transaction"
+    required: "Enter a name for your workout"
   },
   duration: {
     type: Number,

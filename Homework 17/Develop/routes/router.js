@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Workout = require("../models/workout.js");
+const path = require('path');
 
 router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
@@ -31,5 +32,20 @@ router.get("/api/workouts", (req, res) => {
       res.status(400).json(err);
     });
 });
+
+// router.get("/exercise")
+
+// router.get("/stats")
+// //Make sure to return static HTML 
+// //res.sendfile 
+
+// router.get("/exercise", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/public/exercise.html"));
+// });
+
+// router.get("/stats", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/public/stats.html"));
+// });
+
 
 module.exports = router;
